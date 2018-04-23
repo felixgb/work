@@ -37,6 +37,7 @@
 (define current-working-repos
   (list (env "email" (list boring-term split-h))
         (env "message" (list boring-term split-h))
+        (env "hmrc-email-renderer" (list boring-term split-h))
         (env "progs" (list firefox split-h idea split-v vpn))
         (env "service-manager" (list smserver split-h))))
 

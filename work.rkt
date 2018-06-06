@@ -35,11 +35,14 @@
 (define vpn (start "sudo openvpn ~/hmrc/progs/hmrc-vpn.ovpn"))
 
 (define current-working-repos
-  (list (env "email" (list boring-term split-h))
-        (env "message" (list boring-term split-h))
-        (env "hmrc-email-renderer" (list boring-term split-h))
+  (list (env "email" (list))
+        (env "message" (list))
+        (env "entity-resolver" (list))
+        (env "hmrc-email-renderer" (list))
+        (env "preferences" (list))
+        (env "preferences-frontend" (list))
         (env "progs" (list firefox split-h idea split-v vpn))
-        (env "service-manager" (list smserver split-h))))
+        (env "service-manager" (list smserver))))
 
 (define session-names
   (map env-name current-working-repos))

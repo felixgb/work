@@ -27,9 +27,9 @@
 (define split-v (split "v"))
 
 ; set term to make sbt happy
-(define boring-term (start "export TERM=screen"))
 (define sbt (start "sbt"))
 (define smserver (start "smserver"))
+(define emacs (start "emacs"))
 (define firefox (start "firefox -P felix-work"))
 (define idea (start "~/Desktop/idea-IU-181.4203.550/bin/idea.sh"))
 (define vpn (start "sudo openvpn ~/hmrc/progs/hmrc-vpn.ovpn"))
@@ -41,7 +41,7 @@
         (env "hmrc-email-renderer" (list))
         (env "preferences" (list))
         (env "preferences-frontend" (list))
-        (env "progs" (list firefox split-h idea split-v vpn))
+        (env "progs" (list firefox split-v emacs split-h vpn))
         (env "service-manager" (list smserver))))
 
 (define session-names

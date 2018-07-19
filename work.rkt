@@ -28,6 +28,7 @@
 
 ; set term to make sbt happy
 (define sbt (start "sbt"))
+(define venv (start "source servicemanager/bin/activate"))
 (define smserver (start "smserver"))
 (define emacs (start "emacs"))
 (define firefox (start "firefox -P felix-work"))
@@ -42,7 +43,7 @@
         (env "preferences" (list))
         (env "preferences-frontend" (list))
         (env "progs" (list firefox split-v emacs split-h vpn))
-        (env "service-manager" (list smserver))))
+        (env "service-manager" (list venv smserver))))
 
 (define session-names
   (map env-name current-working-repos))
